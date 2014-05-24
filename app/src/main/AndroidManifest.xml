@@ -12,7 +12,7 @@
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="Privatize your audio" />
+            android:value="Remove album art and title/artist information from lock screen audio controls" />
         <meta-data
             android:name="xposedminversion"
             android:value="30" />
