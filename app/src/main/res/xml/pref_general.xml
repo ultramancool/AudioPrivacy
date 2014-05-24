@@ -1,0 +1,15 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:key="enable_checkbox"
+        android:title="@string/pref_title_enable"
+        android:summary="@string/pref_description_enable"
+        android:defaultValue="true" />
+
+    <CheckBoxPreference
+            android:key="hide_text_checkbox"
+            android:title="@string/pref_title_text"
+            android:summary="@string/pref_description_text"
+            android:defaultValue="true" />
+
+</PreferenceScreen>
