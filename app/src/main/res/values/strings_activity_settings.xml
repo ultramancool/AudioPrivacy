@@ -1,8 +1,8 @@
 <resources>
     <string name="title_activity_settings">AudioPrivacy</string>
     <string name="pref_header_general">General</string>
-    <string name="pref_title_enable">Enable</string>
-    <string name="pref_description_enable">Enable or disable AudioPrivacy entirely</string>
+    <string name="pref_title_enable">Hide Album Art</string>
+    <string name="pref_description_enable">Enable or disable Album Art hiding on the lock screen</string>
     <string name="pref_title_text">Hide Text</string>
     <string name="pref_description_text">Hide Artist and Title Text, show only "Audio"</string>
 </resources>
