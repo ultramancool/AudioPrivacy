@@ -2,6 +2,7 @@ package com.audio.privacy;
 
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.media.MediaMetadata;
 import android.media.MediaMetadataRetriever;
 import de.robv.android.xposed.*;
 import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam;
@@ -27,6 +28,19 @@ public class AudioPrivacy implements IXposedHookZygoteInit, IXposedHookLoadPacka
 
     @Override
     public void handleLoadPackage(LoadPackageParam lpparam) throws Throwable {
+        findAndHookMethod(
+                android.media.MediaMetadata.Builder.class, "putBitmap", String.class, Bitmap.class,
+                new XC_MethodHook() {
+                    @Override
+                    protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                        prefs = new XSharedPreferences(SettingsActivity.class.getPackage().getName());
+                        updatePreferences(prefs);
+                        if (enabled)
+                            param.args[1] = null;
+                    }
+                }
+        );
+
         findAndHookMethod(
                 android.media.RemoteControlClient.MetadataEditor.class,
                 "putBitmap", int.class, Bitmap.class,

@@ -4,5 +4,5 @@
     <string name="pref_title_enable">Hide Album Art</string>
     <string name="pref_description_enable">Enable or disable Album Art hiding on the lock screen</string>
     <string name="pref_title_text">Hide Text</string>
-    <string name="pref_description_text">Hide Artist and Title Text, show only "Audio"</string>
+    <string name="pref_description_text">Show only "Audio". Not for 5.x</string>
 </resources>
