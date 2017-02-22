@@ -12,20 +12,10 @@
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="Remove album art and title/artist information from lock screen audio controls" />
+            android:value="Remove album art from the lockscreen." />
         <meta-data
             android:name="xposedminversion"
             android:value="30" />
-
-        <activity
-            android:name="com.audio.privacy.SettingsActivity"
-            android:label="@string/title_activity_settings" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
